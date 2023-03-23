@@ -1,0 +1,66 @@
+.addquestionbtn{
+    background-color:red;
+    color: white;
+    height:'50px';
+    width:'5px';
+    margin-right:'10px';
+    border: 10px;
+    border-radius:5px;
+   
+}
+.searchquestionbar{
+ background-color: whitesmoke;  
+ border-radius: 5px;
+ justify-content: left; 
+ height: 100px;
+ width: 300px;
+ justify-content: space-between;
+ }
+ .buttonContainer{
+    display: flex;
+    margin: 10px; 
+    padding: 10px;
+    
+ }
+
+ .answerboxInput{
+    color:black;
+    background-color:whitesmoke;
+        border-radius:5px;
+        height:300px;
+        width:700px;
+        text-align: left;
+        justify-items: start;
+        margin-left: 600px;
+       
+ }
+
+ .answerButton{
+    
+    text-align:center;
+    height: 50px;
+    width:100px ;
+    border-radius: 5px;
+    margin-left: 600px;
+  
+}
+.answer{
+    background-color: red;
+    color: white; 
+    border-radius: 7px;
+
+}
+.cancel{
+    background-color: red;
+    color: white; 
+    border-radius: 7px; 
+   margin-left: 120px;
+  
+   height: 50px;
+   width: 90px;
+}
+ .answerContainer{
+    
+ 
+    }
+    
