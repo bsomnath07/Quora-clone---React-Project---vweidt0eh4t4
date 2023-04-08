@@ -1,5 +1,5 @@
 import React from 'react'
-
+import AddQuestion from './AddQuestion'
 function AddAnswer() {
   return (
     <div>

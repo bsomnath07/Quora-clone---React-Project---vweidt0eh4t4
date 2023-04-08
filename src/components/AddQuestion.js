@@ -1,14 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 import { Placeholder } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+//import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom'
 import "../styles/AddQuestion.css";
 
-function AddQuestion({ questions, setQuestions }) {
+function AddQuestion({ questions, setQuestions,setShowAddQuestion,handleCancel}) {
   const [newQuestion, setNewQuestion] = useState("");
   const [Questionlist,setQuestionlist]=useState([]);
   const[answerbox,setAnswerbox]=useState(false);
- //const history = useHistory();
+ const history = useHistory();
 
   const handleQuestionChange = (event) => {
     setNewQuestion(event.target.value);
@@ -21,17 +22,22 @@ function AddQuestion({ questions, setQuestions }) {
       setQuestionlist(newQuestions);
     }
     //console.log(newQuestion)
-  //  history.push("/add-question");
+   history.push("/add-question");
   }
 
 const  handleAnswerQuestion=()=>{
   setAnswerbox(true)
-  console.log("question")
+ // console.log("question")
 }
-  const handleCancel = () => {
-    setQuestions(false)
+
+
+  // const handleCancel = () => {
+  //   setQuestions(false)
+  //  setShowAddQuestion(false)
   
-  }
+  // }
+
+
 
   return (
     <>
@@ -55,7 +61,6 @@ const  handleAnswerQuestion=()=>{
         answerbox==true && <div className='answerButton'> <button className='answer'> Add Answer</button>  <button className='cancel'>Cancel</button> </div>
       }
       </div>
-
     </div>
     </>
   );

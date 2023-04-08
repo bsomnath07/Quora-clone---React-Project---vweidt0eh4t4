@@ -30,7 +30,7 @@ function Navbar() {
       <span>
   <Link to="/add-question">
     <button className="button">
-      Add <br/>Question
+      Add <br/>Questions
     </button>
   </Link>
 </span>

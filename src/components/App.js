@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '../styles/App.css';
-import MainPage from "./MainPage";
+import MainPage from  "./MainPage";
 import AddQuestion from "./AddQuestion";
 import AddAnswer from "./AddAnswer";
 import Navbar  from "./Navbar";

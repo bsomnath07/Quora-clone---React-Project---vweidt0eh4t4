@@ -1,22 +1,30 @@
 import React, { useState } from 'react';
 import AddQuestion from './AddQuestion';
-
+import { Link,useHistory } from 'react-router-dom';
 function MainPage() {
-  const [questions, setQuestions] = useState([]);
+  const history = useHistory();
+
+ const [questions, setQuestions] = useState([]);
   const [showAddQuestion, setShowAddQuestion] = useState(false);
 
-  const handleAddQuestionClick = () => {
+  // const handleAddQuestionClick = () => {
+  //   setShowAddQuestion(false);
+  // };
+
+  const handleAddQuestion = (newQuestion) => {
+
+    setQuestions([...questions, newQuestion]);
+   // setShowAddQuestion(false);
     setShowAddQuestion(true);
   };
 
-  const handleAddQuestion = (newQuestion) => {
-    setQuestions([...questions, newQuestion]);
+  const onHandleCancel = () => {
     setShowAddQuestion(false);
+    history.push("/");
+    console.log("cancel");
+
   };
 
-  const handleCancelQuestion = () => {
-    setShowAddQuestion(false);
-  };
 
   return (
     <div>
@@ -25,7 +33,7 @@ function MainPage() {
           questions={questions}
           setQuestions={setQuestions}
           handleAddQuestion={handleAddQuestion}
-          handleCancelQuestion={handleCancelQuestion}
+          handleCancel={onHandleCancel}
         />
       )}
 
