@@ -1,29 +1,31 @@
-.addquestionbtn{
-    background-color:red;
+.addquestionbtn {
+    background-color: rgb(211, 40, 40);
     color: white;
-    height:'50px';
-    width:'5px';
-    margin-right:'10px';
-    border: 10px;
-    border-radius:5px;
-   
-}
-.searchquestionbar{
- background-color: whitesmoke;  
- border-radius: 5px;
- justify-content: left; 
- height: 100px;
- width: 300px;
- justify-content: space-between;
- }
- .buttonContainer{
+    height: 50px;
+    width: 80px;
+    margin-right: 10px;
+    border: none; 
+    border-radius: 8px;
+    display: inline;
+    cursor: pointer;
+  }
+  .buttonContainer{
     display: flex;
     margin: 10px; 
     padding: 10px;
     
  }
+.searchquestionbar{
+ 
+ background-color: rgba(245, 245, 245, 0.911);  
+ border-radius: 5px;
+ justify-content: left; 
+ height: 100px;
+ width: 300px;
+ justify-content: space-between;
 
- .answerboxInput{
+ }
+.answerboxInput{
     color:black;
     background-color:whitesmoke;
         border-radius:5px;
@@ -32,25 +34,9 @@
         text-align: left;
         justify-items: start;
         margin-left: 600px;
-       
- }
+    }
 
- .answerButton{
-    
-    text-align:center;
-    height: 50px;
-    width:100px ;
-    border-radius: 5px;
-    margin-left: 600px;
-  
-}
-.answer{
-    background-color: red;
-    color: white; 
-    border-radius: 7px;
-
-}
-.cancel{
+    .cancel{
     background-color: red;
     color: white; 
     border-radius: 7px; 
@@ -59,8 +45,43 @@
    height: 50px;
    width: 90px;
 }
- .answerContainer{
-    
- 
-    }
-    
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.ques-ans-container{
+  
+  grid-column: 2;
+  align-items: left;
+  line-height: 1.0;
+  gap: 20px;
+}
+/* .ques-ans-container li::before {
+  content: "\2022";
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 0.2em;
+} */
+
+.questionText{
+display: inline-block;
+font-weight:medium;
+grid-column: 2;
+list-style: disc;
+padding-left: 20px;
+margin-bottom: 10px;
+cursor: pointer;
+
+}
+.answerText{
+align-items: start;
+
+  
+}
+.answer {
+  grid-column: 2;
+  display: block;
+  font-weight: bolder;
+}
+
